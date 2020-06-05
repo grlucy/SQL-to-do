@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS sql_to_do;
+CREATE DATABASE sql_to_do;
+USE sql_to_do;
+
+CREATE TABLE todos (
+ id INTEGER AUTO_INCREMENT NOT NULL,
+ todo_text VARCHAR(255) NULL,
+ complete BOOLEAN NOT NULL DEFAULT 0,
+ PRIMARY KEY (id)
+);
