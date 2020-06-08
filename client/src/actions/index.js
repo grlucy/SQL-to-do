@@ -4,3 +4,10 @@ export const toDoTextAction = (term) => {
     payload: term,
   };
 };
+
+export const toDoListAction = (listArray) => {
+  return {
+    type: "LIST",
+    payload: listArray,
+  };
+};

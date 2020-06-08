@@ -1,10 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 function Progress() {
+  const todoList = useSelector((state) => state.toDoList);
+
   return (
-    <section>
-      <p>This is Progress</p>
-    </section>
+    <>
+      {todoList.length > 0 && (
+        <section>
+          <p>This is Progress</p>
+        </section>
+      )}
+    </>
   );
 }
 
