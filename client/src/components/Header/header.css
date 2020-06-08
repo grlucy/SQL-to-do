@@ -1,4 +1,6 @@
 h1 {
   font-family: "Monoton", cursive;
   font-weight: 400;
+  font-size: calc(2.2rem + 1.7vw);
+  margin: 2rem 0;
 }
