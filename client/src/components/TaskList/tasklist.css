@@ -1,0 +1,21 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.todo-item:hover {
+  background-color: #471f5b;
+}
+.todo-check {
+  display: flex;
+}
+.fa {
+  color: #9e48b0;
+  margin: 3px 2rem 0 0.5rem;
+  cursor: pointer;
+}
+.delete-item {
+  margin: 0 0.5rem 0 2rem;
+  cursor: pointer;
+  color: #f2c810;
+}

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import API from "../../utils/API";
 import { toDoListAction } from "../../actions";
+import "./tasklist.css";
 
 function TaskList() {
   const todoList = useSelector((state) => state.toDoList);
@@ -23,8 +24,17 @@ function TaskList() {
       {todoList.length > 0 && (
         <section>
           {todoList.map((todo) => (
-            <div key={todo.id}>
-              <p>{todo.todo_text}</p>
+            <div key={todo.id} class="todo-item">
+              <p class="todo-check">
+                <i
+                  className={
+                    todo.complete ? "fa fa-check-circle" : "fa fa-circle"
+                  }
+                  aria-hidden="true"
+                ></i>
+                <span>{todo.todo_text}</span>
+              </p>
+              <p class="delete-item">&times;</p>
             </div>
           ))}
         </section>
