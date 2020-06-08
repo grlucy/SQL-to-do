@@ -10,4 +10,5 @@ To Do List App Using React + Node + Express + SQL
 
 ## Credits
 
-- "React + NodeJS + SQL Simple Full Stack Application" tutorial by [Theodore Anderson on YouTube](https://www.youtube.com/watch?v=HPIjjFGYSJ4)
+- ["React + NodeJS + SQL Simple Full Stack Application"](https://www.youtube.com/watch?v=HPIjjFGYSJ4) tutorial by Theodore Anderson on YouTube
+- ["CSS Glowing Gradient Border Effects"](https://www.youtube.com/watch?v=t7dWFUggkno) tutorial by Online Tutorials on YouTube

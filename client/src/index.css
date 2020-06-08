@@ -5,6 +5,44 @@
 body {
   background-color: rgb(36, 14, 56);
   color: white;
+  line-height: 1.6;
   text-align: center;
   font-family: "Comfortaa", sans-serif;
+}
+section {
+  box-sizing: border-box;
+  width: 85vw;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  position: relative;
+  background-color: rgb(36, 14, 56);
+}
+section:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  z-index: -1;
+}
+section:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  z-index: -2;
+  filter: blur(0.5rem);
+}
+section:before,
+section:after {
+  background: linear-gradient(
+    to left top,
+    rgb(238, 111, 255),
+    rgb(36, 14, 56),
+    rgb(243, 201, 16)
+  );
 }

@@ -12,8 +12,10 @@ function App() {
       <Header />
       <Progress />
       <TaskList />
-      <AddTask />
-      <ClearAll />
+      <section>
+        <AddTask />
+        <ClearAll />
+      </section>
     </>
   );
 }
