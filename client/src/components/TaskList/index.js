@@ -17,7 +17,7 @@ function TaskList() {
 
   useEffect(() => {
     loadTasks();
-  });
+  }, []);
 
   return (
     <>
