@@ -8,6 +8,24 @@ const orm = {
       cb(res);
     });
   },
+  deleteOne: function (table, column, value, cb) {
+    const query = `DELETE FROM ?? WHERE ?? = ?`;
+    connection.query(query, [table, column, value], function (err, res) {
+      if (err) throw err;
+      cb(res);
+    });
+  },
+  updateOne: function (table, column1, value1, column2, value2, cb) {
+    const query = `UPDATE ?? SET ?? = ? WHERE ?? = ?`;
+    connection.query(
+      query,
+      [table, column1, value1, column2, value2],
+      function (err, result) {
+        if (err) throw err;
+        cb(result);
+      }
+    );
+  },
 };
 
 module.exports = orm;

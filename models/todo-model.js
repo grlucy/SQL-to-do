@@ -6,6 +6,16 @@ const todo = {
       cb(res);
     });
   },
+  deleteOne: function (id, cb) {
+    orm.deleteOne("todos", "id", id, function (res) {
+      cb(res);
+    });
+  },
+  updateStatus: function (status, id, cb) {
+    orm.updateOne("todos", "complete", status, "id", id, function (res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = todo;
