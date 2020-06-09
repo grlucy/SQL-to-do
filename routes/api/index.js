@@ -1,16 +1,11 @@
 const router = require("express").Router();
-const connection = require("../../config/connection");
 
-router.get("/list", (req, res) => {
-  connection.query(`SELECT * FROM todos`, (err, results) => {
-    if (err) {
-      return res.send(err);
-    } else {
-      return res.json({
-        todos: results,
-      });
-    }
-  });
-});
+const { selectAll } = require("../../controllers/todo-controller");
+
+router.get("/list", selectAll);
+
+// router.delete("/:id", (req, res) => {
+//   const id = req.params.id.trim();
+// });
 
 module.exports = router;

@@ -18,10 +18,11 @@ function Progress() {
   useEffect(() => {
     const totalLen = todoList.length;
     const completeLen = todoList.filter((task) => task.complete > 0).length;
-    const percentageTotal = Math.floor((completeLen / totalLen) * 100);
+    const percentageTotal = Math.floor((completeLen / totalLen) * 100) || 0;
     dispatch(listLengthAction(totalLen));
     dispatch(completeLengthAction(completeLen));
     dispatch(percentageAction(percentageTotal));
+    // eslint-disable-next-line
   }, [todoList]);
 
   return (

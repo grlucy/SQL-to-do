@@ -11,12 +11,13 @@ function TaskList() {
 
   const loadTasks = () => {
     API.getAllTodos()
-      .then((res) => dispatch(toDoListAction(res.data.todos)))
+      .then((res) => dispatch(toDoListAction(res.data.todos || [])))
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     loadTasks();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -24,8 +25,8 @@ function TaskList() {
       {todoList.length > 0 && (
         <section>
           {todoList.map((todo) => (
-            <div key={todo.id} class="todo-item">
-              <p class="todo-check">
+            <div key={todo.id} className="todo-item">
+              <p className="todo-check">
                 <i
                   className={
                     todo.complete ? "fa fa-check-circle" : "fa fa-circle"
@@ -34,7 +35,7 @@ function TaskList() {
                 ></i>
                 <span>{todo.todo_text}</span>
               </p>
-              <p class="delete-item">&times;</p>
+              <p className="delete-item">&times;</p>
             </div>
           ))}
         </section>
