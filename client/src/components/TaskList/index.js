@@ -20,6 +20,18 @@ function TaskList() {
     // eslint-disable-next-line
   }, []);
 
+  const handleUpdate = (status, id) => {
+    API.updateStatus(status, id)
+      .then((res) => loadTasks())
+      .catch((err) => console.log(err));
+  };
+
+  const handleDeleteOne = (id) => {
+    API.deleteOneTodo(id)
+      .then((res) => loadTasks())
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       {todoList.length > 0 && (
@@ -32,10 +44,24 @@ function TaskList() {
                     todo.complete ? "fa fa-check-circle" : "fa fa-circle"
                   }
                   aria-hidden="true"
+                  onClick={() => {
+                    let newStatus;
+                    if (todo.complete === 0) {
+                      newStatus = 1;
+                    } else {
+                      newStatus = 0;
+                    }
+                    handleUpdate(newStatus, todo.id);
+                  }}
                 ></i>
                 <span>{todo.todo_text}</span>
               </p>
-              <p className="delete-item">&times;</p>
+              <p
+                className="delete-item"
+                onClick={() => handleDeleteOne(todo.id)}
+              >
+                &times;
+              </p>
             </div>
           ))}
         </section>
