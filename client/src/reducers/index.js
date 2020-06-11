@@ -5,6 +5,7 @@ import toDoListReducer from "./to-do-list";
 import listLengthReducer from "./list-length";
 import completeLengthReducer from "./complete-length";
 import percentageReducer from "./percentage";
+import clearAllReducer from "./clear-all";
 
 const allReducers = combineReducers({
   toDoText: toDoTextReducer,
@@ -12,6 +13,7 @@ const allReducers = combineReducers({
   listLength: listLengthReducer,
   completeLength: completeLengthReducer,
   percentage: percentageReducer,
+  clearAll: clearAllReducer,
 });
 
 export default allReducers;

@@ -32,3 +32,9 @@ export const percentageAction = (num) => {
     payload: num,
   };
 };
+
+export const clearAllAction = () => {
+  return {
+    type: "CLEAR_ALL",
+  };
+};
