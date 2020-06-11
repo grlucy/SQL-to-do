@@ -15,10 +15,14 @@ function ClearAll() {
 
   return (
     <>
-      <button id="clear-all" onClick={() => handleClick()}>
+      <button
+        className="btn-style"
+        id="clear-all"
+        onClick={() => handleClick()}
+      >
         CLEAR ALL
       </button>
-      {clearAllBoolean && <PopUp />}
+      {clearAllBoolean && <PopUp handleClick={() => handleClick()} />}
     </>
   );
 }
