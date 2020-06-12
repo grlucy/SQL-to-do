@@ -21,6 +21,11 @@ const todo = {
       cb(res);
     });
   },
+  createOne: function (value, cb) {
+    orm.createOne("todos", "todo_text", value, function (res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = todo;

@@ -31,3 +31,11 @@ exports.deleteAll = (req, res) => {
     });
   });
 };
+
+exports.createOne = (req, res) => {
+  todo.createOne(req.params.value.trim(), (data) => {
+    return res.json({
+      data,
+    });
+  });
+};

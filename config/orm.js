@@ -33,6 +33,13 @@ const orm = {
       cb(res);
     });
   },
+  createOne: function (table, column, value, cb) {
+    const query = `INSERT INTO ?? (??) VALUES (?)`;
+    connection.query(query, [table, column, value], function (err, res) {
+      if (err) throw err;
+      cb(res);
+    });
+  },
 };
 
 module.exports = orm;
