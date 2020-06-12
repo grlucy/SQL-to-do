@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+*:focus {
+  outline: none;
+}
 body {
   background-color: rgb(36, 14, 56);
   color: white;

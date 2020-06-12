@@ -16,4 +16,8 @@ export default {
   deleteAll: function () {
     return axios.delete(`/api/clearAll`);
   },
+
+  createTodo: function (value) {
+    return axios.post(`/api/create/${value}`);
+  },
 };
