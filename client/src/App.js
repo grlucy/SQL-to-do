@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import Header from "./components/Header";
 import Progress from "./components/Progress";
@@ -7,14 +8,16 @@ import AddTask from "./components/AddTask";
 import ClearAll from "./components/ClearAll";
 
 function App() {
+  const todoList = useSelector((state) => state.toDoList);
+
   return (
     <>
       <Header />
-      <Progress />
+      {todoList.length > 0 && <Progress />}
       <TaskList />
       <section>
         <AddTask />
-        <ClearAll />
+        {todoList.length > 0 && <ClearAll />}
       </section>
     </>
   );

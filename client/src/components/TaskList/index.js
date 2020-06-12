@@ -7,6 +7,7 @@ import "./tasklist.css";
 
 function TaskList() {
   const todoList = useSelector((state) => state.toDoList);
+  const clearAllBoolean = useSelector((state) => state.clearAll);
   const dispatch = useDispatch();
 
   const loadTasks = () => {
@@ -16,9 +17,11 @@ function TaskList() {
   };
 
   useEffect(() => {
-    loadTasks();
+    if (!clearAllBoolean) {
+      loadTasks();
+    }
     // eslint-disable-next-line
-  }, []);
+  }, [clearAllBoolean]);
 
   const handleUpdate = (status, id) => {
     API.updateStatus(status, id)

@@ -26,25 +26,21 @@ function Progress() {
   }, [todoList]);
 
   return (
-    <>
-      {todoList.length > 0 && (
-        <figure>
-          <div
-            style={{
-              background: `linear-gradient(to right, #b7931c ${percentage}%, #471f5b ${percentage}%)`,
-              height: "1rem",
-              borderRadius: "8px",
-              margin: "0 auto 1rem",
-              maxWidth: "736px",
-              width: "70vw",
-            }}
-          ></div>
-          <p>
-            {completeLength} / {listLength} tasks complete
-          </p>
-        </figure>
-      )}
-    </>
+    <figure>
+      <div
+        style={{
+          background: `linear-gradient(to right, #b7931c ${percentage}%, #471f5b ${percentage}%)`,
+          height: "1rem",
+          borderRadius: "8px",
+          margin: "0 auto 1rem",
+          maxWidth: "736px",
+          width: "70vw",
+        }}
+      ></div>
+      <p>
+        {completeLength} / {listLength} tasks complete
+      </p>
+    </figure>
   );
 }
 

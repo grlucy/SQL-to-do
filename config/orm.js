@@ -26,6 +26,13 @@ const orm = {
       }
     );
   },
+  deleteAll: function (table, cb) {
+    const query = `TRUNCATE TABLE ??`;
+    connection.query(query, [table], function (err, res) {
+      if (err) throw err;
+      cb(res);
+    });
+  },
 };
 
 module.exports = orm;

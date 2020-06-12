@@ -23,3 +23,11 @@ exports.updateStatus = (req, res) => {
     });
   });
 };
+
+exports.deleteAll = (req, res) => {
+  todo.deleteAll((data) => {
+    return res.json({
+      data,
+    });
+  });
+};

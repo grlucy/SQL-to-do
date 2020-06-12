@@ -4,12 +4,15 @@ const {
   selectAll,
   deleteOne,
   updateStatus,
+  deleteAll,
 } = require("../../controllers/todo-controller");
 
 router.get("/list", selectAll);
 
-router.delete("/:id", deleteOne);
+router.delete("/clear/id/:id", deleteOne);
 
 router.put("/status/:status/id/:id", updateStatus);
+
+router.delete("/clearAll", deleteAll);
 
 module.exports = router;

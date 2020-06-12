@@ -16,6 +16,11 @@ const todo = {
       cb(res);
     });
   },
+  deleteAll: function (cb) {
+    orm.deleteAll("todos", function (res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = todo;
