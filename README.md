@@ -1,14 +1,43 @@
 # SQL To Do List App
 
-Deployed at \_\_
+Deployed at https://sql-list.herokuapp.com/
 
 ## Description
 
-To Do List App Using React + Node + Express + SQL
+A mobile-first, full-stack to do list app that enables users to add tasks, mark tasks complete, delete individual tasks, bulk delete, and track task completion progress.
+
+| Technologies used:                                                       |
+| ------------------------------------------------------------------------ |
+| SQL, MySQL, Express, React, Redux, Node.js, Axios, JavaScript, CSS, HTML |
+
+## Demo
+
+![SQL To Do List App Demo](reference/SQLtodo-demo-large.gif)
 
 ## Installation
+
+Create a .env file in the "SQL-to-do" directory and save your MySQL password locally.
+
+Use the database schema in the "db" directory to create the "sql_to_do" database locally from MySQL Workbench. Optionally, use the seeds file to populate the database.
+
+In your CLI, open the "SQL-to-do" directory and run the following commands:
+
+```sh
+npm install
+npm start
+```
 
 ## Credits
 
 - ["React + NodeJS + SQL Simple Full Stack Application"](https://www.youtube.com/watch?v=HPIjjFGYSJ4) tutorial by Theodore Anderson on YouTube
 - ["CSS Glowing Gradient Border Effects"](https://www.youtube.com/watch?v=t7dWFUggkno) tutorial by Online Tutorials on YouTube
+
+## License
+
+© 2020 Gina Lucy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
